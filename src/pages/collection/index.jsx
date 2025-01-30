@@ -1,6 +1,11 @@
+import Form from '../landing/form'
+
 const Collection = () => {
   return (
-    <div>Collection</div>
+    <div>
+<h1>create event</h1>
+      <Form/>
+    </div>
   )
 }
 

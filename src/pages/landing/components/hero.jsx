@@ -1,25 +1,30 @@
-import { heroBg } from "../../../assets"
+import React from 'react';
+import heroVideo from '../../../assets/Herovideo.mp4'; // Ensure this path is correct
 
 const Hero = () => {
   return (
-  <div className="flex h-screen">
-<div className="w-1/2 color bg-yellow-400 place-content-center">
-      <div className="mx-auto w-fit flex flex-col items-start gap-y-4 p-20">
-        <div className="flex flex-col text-5xl">
-          <span className="font-thin">Best Paintings of<br /> </span>
-          <span className="font-bold">LizArt Collections</span>
+    <div className="relative flex h-screen overflow-hidden">
+      <video
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div className="relative z-10 mx-auto w-fit flex flex-col items-start gap-y-4 p-20 bg-black bg-opacity-50">
+        <div className="flex flex-col text-5xl text-white">
+          <span className="font-bold">Tilopsy</span>
+          <span className="font-thin">Your Best Bet For Events<br /></span>
         </div>
-        <p className="w-80">
-          What’s that, you say? He inhaled a painting?? The man must be enormous! Not quite. Wigan’s works are ‘micro-sculptures’, so tiny they must be viewed through a microscope.    </p>
-        <button className="bg-white px-6 py-2 rounded-full drop-shadow-lg	text-cyan-800">DISCOVER</button>
+        <p className="w-80 text-white">
+          What’s that, you say? He inhaled a painting?? The man must be enormous! Not quite. Wigan’s works are ‘micro-sculptures’, so tiny they must be viewed through a microscope.
+        </p>
+        <button className="#E90074 px-6 py-2 rounded-full drop-shadow-lg text-cyan-800">
+          DISCOVER
+        </button>
       </div>
     </div>
-
-    <div className="w-1/2">
-      <img src={heroBg} alt="Hero background" className="object-cover w-full h-full" />
-    </div>
-  </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
