@@ -1,10 +1,10 @@
 import React from "react";
-import innovator from "../../assets/images/image_3.jpg";
+import innovator from "../../assets/images/petersonNyonju.jpg";
 
 const About = () => {
   return (
     <div className="container mx-auto px-6 py-12 text-center">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">About This Innovator</h1>
+      <h1 className="text-4xl font-bold text-green-600 mb-4">About This Innovator</h1>
       <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
         {/* Image Section */}
         <div className="w-full md:w-1/3">
