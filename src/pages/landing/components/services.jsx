@@ -41,7 +41,7 @@ const Services = () => {
       {/* 🟢 Services Section (Fix Applied) */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-green-600 mb-6">Our Services</h2>
+          <h2 className="text-4xl font-bold text-green-600 mb-6">Our Products & Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service) => (
               <div
@@ -82,7 +82,7 @@ const Services = () => {
               <img src={featuredImg} alt="Featured" className="w-full h-80 object-cover rounded-lg shadow-lg mb-4" />
               <h2 className="text-3xl font-bold text-green-600 mb-3">Fresh & Healthy</h2>
               <p className="text-gray-700 mb-4">Explore our range of fresh organic products.</p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">Shop Now</button>
+              <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">See More</button>
             </div>
 
             {/* Right Images */}
