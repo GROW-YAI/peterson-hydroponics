@@ -3,7 +3,7 @@ import Form from '../landing/form'
 const Collection = () => {
   return (
     <div>
-<h1>Collection</h1>
+<h1></h1>
       <Form/>
     </div>
   )
