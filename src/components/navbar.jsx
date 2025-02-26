@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -9,14 +8,14 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50 w-full">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-green-400">PH Foods</Link>
+        <a href="#home" className="text-2xl font-bold text-green-400">PH Foods</a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-green-700 hover:text-green-300">Home</Link>
-          <Link to="/services" className="text-green-700 hover:text-green-300">Services</Link>
-          <Link to="/about" className="text-green-700 hover:text-green-300">About</Link>
-          <Link to="/contact" className="text-green-700 hover:text-green-300">Contact</Link>
+          <a href="#home" className="text-green-700 hover:text-green-300">Home</a>
+          <a href="#services" className="text-green-700 hover:text-green-300">Services</a>
+          <a href="#about" className="text-green-700 hover:text-green-300">About</a>
+          <a href="#contact" className="text-green-700 hover:text-green-300">Contact</a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -28,10 +27,10 @@ const Navbar = () => {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
-          <Link to="/" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Home</Link>
-          <Link to="/services" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Services</Link>
-          <Link to="/about" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">About</Link>
-          <Link to="/contact" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Contact</Link>
+          <a href="#home" className="block px-6 py-3 text-gray-700 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Home</a>
+          <a href="#services" className="block px-6 py-3 text-gray-700 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#about" className="block px-6 py-3 text-gray-700 hover:bg-gray-100" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#contact" className="block px-6 py-3 text-gray-700 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Contact</a>
         </div>
       )}
     </nav>

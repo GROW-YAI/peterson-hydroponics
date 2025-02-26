@@ -1,52 +1,64 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-const reviews = [
+const resources = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    review:
-      "Absolutely love this! The quality is top-notch and the service was fantastic. Highly recommend!",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    title: "Hydroponics Beginner Guide",
+    description: "Learn the basics of hydroponics farming and how to get started.",
+    link: "https://www.epicgardening.com/hydroponics-guide/",
   },
   {
     id: 2,
-    name: "Michael Lee",
-    review:
-      "Great experience! The delivery was super fast, and the product exceeded my expectations.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    title: "Hydroponic Systems Explained",
+    description: "An in-depth look at different types of hydroponic systems and how they work.",
+    link: "https://www.maximumyield.com/hydroponic-systems/2/993",
   },
   {
     id: 3,
-    name: "Emily Davis",
-    review:
-      "Such an amazing product. Will definitely purchase again! The team is very responsive and helpful.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    title: "Best Plants for Hydroponics",
+    description: "A list of the best plants to grow using hydroponics.",
+    link: "https://www.thespruce.com/best-plants-for-hydroponics-4775752",
+  },
+  {
+    id: 4,
+    title: "Nutrient Solutions for Hydroponics",
+    description: "Learn about the essential nutrients required for a successful hydroponic setup.",
+    link: "https://hydroponicway.com/hydroponic-nutrients-guide/",
+  },
+  {
+    id: 5,
+    title: "DIY Hydroponic Systems",
+    description: "Step-by-step guides on how to build your own hydroponic system at home.",
+    link: "https://www.hydroponicsdiyprojects.com/",
+  },
+  {
+    id: 6,
+    title: "Hydroponic Systems Explained",
+    description: "An in-depth look at different types of hydroponic systems and how they work.",
+    link: "https://www.maximumyield.com/hydroponic-systems/2/993",
   },
 ];
 
-const Reviews = () => {
+const Resources = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-100 to-green-100">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-green-700 mb-8">What Our Customers Say</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <motion.div
-              key={review.id}
-              className="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <img
-                src={review.image}
-                alt={review.name}
-                className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-green-500"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">{review.name}</h3>
-              <p className="text-gray-600 mt-2">"{review.review}"</p>
-            </motion.div>
+        <h2 className="text-4xl font-bold text-green-600 mb-6">Hydroponics Resources</h2>
+        <p className="text-gray-700 mb-8">Explore these resources to learn more about hydroponics farming.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {resources.map((resource) => (
+            <div key={resource.id} className="bg-green-50 p-4 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105">
+              <h3 className="text-2xl font-semibold text-gray-900">{resource.title}</h3>
+              <p className="text-gray-600 mt-2">{resource.description}</p>
+              <a
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 font-semibold mt-3 inline-block hover:underline"
+              >
+                Visit Site
+              </a>
+            </div>
           ))}
         </div>
       </div>
@@ -54,4 +66,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Resources;

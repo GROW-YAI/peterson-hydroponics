@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ChefHat, Utensils, Truck } from "lucide-react";
 import fruitsImg from "../../../assets/images/fruits.jpg";
 import vegetablesImg from "../../../assets/images/vegetables.jpg";
@@ -82,7 +83,11 @@ const Services = () => {
               <img src={featuredImg} alt="Featured" className="w-full h-80 object-cover rounded-lg shadow-lg mb-4" />
               <h2 className="text-3xl font-bold text-green-600 mb-3">Fresh & Healthy</h2>
               <p className="text-gray-700 mb-4">Explore our range of fresh organic products.</p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">See More</button>
+              <Link to="/more-products">
+  <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">
+    See More
+  </button>
+</Link>
             </div>
 
             {/* Right Images */}
