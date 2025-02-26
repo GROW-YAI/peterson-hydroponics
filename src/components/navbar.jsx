@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/images/phlogo.png"; // Update the path based on your project structure
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,10 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50 w-full">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="text-2xl font-bold text-green-400">PH Foods</a>
+        <a href="#home" className="flex items-center space-x-2">
+          <img src={logo} alt="Logo" className="h-10 w-auto" /> 
+          {/* Adjust height and width as needed */}
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6">

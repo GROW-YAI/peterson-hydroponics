@@ -21,7 +21,7 @@ const Hero = () => {
         Let food be thy medicine and medicine be thy food!
         </p>
         <button className="#E90074 py-2 rounded-full drop-shadow-lg text-green-400 font-bold">
-          DISCOVER
+          WELCOME
         </button>
       </div>
     </div>

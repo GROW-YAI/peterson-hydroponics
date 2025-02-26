@@ -5,7 +5,7 @@ const resources = [
     id: 1,
     title: "Hydroponics Beginner Guide",
     description: "Learn the basics of hydroponics farming and how to get started.",
-    link: "https://www.epicgardening.com/hydroponics-guide/",
+    link: "https://www.youtube.com/watch?v=3Ww2TP_tU7o",
   },
   {
     id: 2,

@@ -8,7 +8,7 @@ import poultryImg from "../../../assets/images/poultry.jpg";
 
 
 const products = [
-  { id: 1, name: "Dairy Products", image: dairyImg, description: "Fresh dairy products, including milk, cheese, and yogurt." },
+  { id: 1, name: "Dairy Products", image: dairyImg, description: "Fresh dairy products, including milk, cheese, and yogurt from our farm animals." },
   { id: 2, name: "Healthy Nuts", image: nutsImg, description: "A variety of nuts rich in protein and essential nutrients." },
   { id: 3, name: "Whole Grains", image: grainsImg, description: "Nutritious whole grains, perfect for a balanced diet." },
   { id: 4, name: "Spices", image: spicesImg, description: "Aromatic and flavorful spices to enhance your meals." }, 
