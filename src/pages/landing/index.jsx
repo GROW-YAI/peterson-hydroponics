@@ -5,13 +5,23 @@ import Reviews from "./components/reviews"
 import Services from "./components/services"
 import Testimonials from "./components/testimonials"
 import MoreProducts from "./components/more-products"
+import ContactUs from "./contactUs"
 
 const LandingPage = () => {
   return (
     <div>
-      <Hero />
-      <Services />
+      <section id="home">       
+        <Hero />
+      </section>
+      <section id="services">      
+        <Services />
+      </section>
+      <section id="about">
       <About />
+      </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
       <Collection />
       <Testimonials />
       <Reviews />

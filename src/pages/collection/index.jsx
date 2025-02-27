@@ -1,4 +1,4 @@
-import Form from '../landing/form'
+import Form from '../landing/contactUs'
 
 const Collection = () => {
   return (
