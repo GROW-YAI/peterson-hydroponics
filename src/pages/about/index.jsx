@@ -18,7 +18,7 @@ const About = () => {
         {/* Text Content */}
         <div className="w-full md:w-2/3 text-gray-700 text-lg leading-relaxed">
           <p>
-            Meet Peterson. This 18-35-year-old entrepreneur from Atebubu-Amantin in the Bono East Region is tackling the challenge of limited access to green vegetables during the dry season. His innovative hydroponic farming system provides a sustainable and chemical-free way to grow vegetables year-round.
+            Meet Peterson; a young and ambitious entrepreneur from Atebubu-Amantin in the Bono East Region. He is tackling the challenge of limited access to green vegetables during the dry season. His innovative hydroponic farming system provides a sustainable and chemical-free way to grow vegetables year-round.
           </p>
           <p className="mt-4">
             With this breakthrough, his community gains increased access to fresh, healthy produce, ensuring a steady supply even in dry seasons. His efforts are paving the way for sustainable agriculture and food security in the region.

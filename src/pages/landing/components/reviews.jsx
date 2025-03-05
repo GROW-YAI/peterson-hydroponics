@@ -4,39 +4,40 @@ const resources = [
   {
     id: 1,
     title: "Hydroponics Beginner Guide",
-    description: "Learn the basics of hydroponics farming and how to get started.",
+    description: "Next Gen Farming Without Soil and 90% Less Water.",
     link: "https://www.youtube.com/watch?v=3Ww2TP_tU7o",
   },
   {
     id: 2,
-    title: "Hydroponic Systems Explained",
-    description: "An in-depth look at different types of hydroponic systems and how they work.",
-    link: "https://www.maximumyield.com/hydroponic-systems/2/993",
+    title: "Best Plants for Hydroponics",
+    description: "Grow EASY Hydroponics-Kratky method.",
+    link: "https://www.youtube.com/watch?v=UnUxInGOmIM",
   },
   {
     id: 3,
-    title: "Best Plants for Hydroponics",
-    description: "A list of the best plants to grow using hydroponics.",
-    link: "https://www.thespruce.com/best-plants-for-hydroponics-4775752",
+    title: "Hydroponic Systems Explained",
+    description: "How to grow many cherry tomatoes in plastic bottles.",
+    link: "https://www.youtube.com/watch?v=py5veSGfGgE",
   },
   {
     id: 4,
     title: "Nutrient Solutions for Hydroponics",
-    description: "Learn about the essential nutrients required for a successful hydroponic setup.",
-    link: "https://hydroponicway.com/hydroponic-nutrients-guide/",
+    description: "Learn about indoor farming system.",
+    link: "https://www.youtube.com/watch?v=CNCMktFHSq4",
   },
   {
     id: 5,
     title: "DIY Hydroponic Systems",
-    description: "Step-by-step guides on how to build your own hydroponic system at home.",
-    link: "https://www.hydroponicsdiyprojects.com/",
+    description: "Step-by-step guide build at home.",
+    link: "https://www.youtube.com/watch?v=3RA43nx1k2g",
   },
   {
     id: 6,
-    title: "Hydroponic Systems Explained",
-    description: "An in-depth look at different types of hydroponic systems and how they work.",
-    link: "https://www.maximumyield.com/hydroponic-systems/2/993",
+    title: "Build Your Own Hydroponic Systems",
+    description: "Start from scratch.",
+    link: "https://www.youtube.com/watch?v=dKYsZJsD9dI",
   },
+ 
 ];
 
 const Resources = () => {

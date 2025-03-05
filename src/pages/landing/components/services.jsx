@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ChefHat, Utensils, Truck } from "lucide-react";
+import { Tractor, Utensils, Truck, } from "lucide-react";
 import fruitsImg from "../../../assets/images/fruits.jpg";
 import vegetablesImg from "../../../assets/images/vegetables.jpg";
 import juicesImg from "../../../assets/images/juices.jpg";
@@ -11,9 +11,9 @@ import featuredImg from "../../../assets/images/featured.jpg";
 const services = [
   {
     id: 1,
-    icon: <ChefHat size={40} className="text-green-600" />,
-    title: "Professional Chefs",
-    description: "Our highly skilled chefs create delicious meals with fresh ingredients to satisfy your cravings."
+    icon: <Tractor size={40} className="text-green-600" />,
+    title: "Skilled Farmers",
+    description: "Our highly skilled farmers carefully select and plant quality seeds that yield quality harvest."
   },
   {
     id: 2,

@@ -10,12 +10,12 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-10 w-auto" /> 
+          <img src={logo} alt="Logo" className="h-14 w-auto" /> 
           {/* Adjust height and width as needed */}
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 text-lg">
           <a href="#home" className="text-green-700 hover:text-green-300">Home</a>
           <a href="#services" className="text-green-700 hover:text-green-300">Services</a>
           <a href="#about" className="text-green-700 hover:text-green-300">About</a>
