@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex justify-center gap-4 mt-3">
               <a 
-                href="https://www.facebook.com/yourpage" 
+                href="https://www.facebook.com/profile.php?id=61573921437821" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-gray-200"
@@ -38,7 +38,7 @@ const Footer = () => {
                 <Facebook size={24} />
               </a>
               <a 
-                href="https://www.instagram.com/yourpage" 
+                href="https://www.instagram.com/peter.sonhydrophonics/?next=%2F&hl=en" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-gray-200"
@@ -52,6 +52,14 @@ const Footer = () => {
                 className="hover:text-gray-200"
               >
                 <Twitter size={24} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/petersonhydrophonics/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-200"
+              >
+                <Linkedin size={24} />
               </a>
             </div>
           </div>
