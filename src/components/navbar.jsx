@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-14 w-auto" /> 
+          <img src={logo} alt="Logo" className="h-14" /> 
           {/* Adjust height and width as needed */}
         </a>
 

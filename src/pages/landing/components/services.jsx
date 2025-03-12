@@ -18,8 +18,8 @@ const services = [
   {
     id: 2,
     icon: <Utensils size={40} className="text-green-600" />,
-    title: "Quality Ingredients",
-    description: "We use only the finest ingredients to ensure every bite is full of flavor and nutrition."
+    title: "Quality Foodstuffs",
+    description: "We use only the finest foodstuffs to ensure every bite is full of flavor and nutrition."
   },
   {
     id: 3,
