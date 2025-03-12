@@ -20,6 +20,7 @@ const Navbar = () => {
           <a href="#services" className="text-green-700 hover:text-green-300">Services</a>
           <a href="#about" className="text-green-700 hover:text-green-300">About</a>
           <a href="#contact" className="text-green-700 hover:text-green-300">Contact</a>
+          <a href="#contact" className="text-green-700 hover:text-green-300">Resources</a>
         </div>
 
         {/* Mobile Menu Button */}

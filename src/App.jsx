@@ -1,12 +1,12 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
-import LandingPage from './pages/landing'
-import About from './pages/about'
-import Collection from './pages/collection'
-import ContactUs from './pages/contact-us'
-import RootLayout from './layouts/rootLayout'
+import LandingPage from './pages/landing';
+import About from './pages/about';
+import Collection from './pages/collection';
+import ContactUs from './pages/contact-us';
+import RootLayout from './layouts/rootLayout';
 import MoreProducts from "./pages/landing/components/more-products";
-
+import Reviews from "./pages/reviews";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +34,10 @@ function App() {
       {
         path: "more-products",
         element: <MoreProducts />,
+      },
+      {
+        path: "reviews",
+        element: <Reviews />,
       },
       ]
     },
