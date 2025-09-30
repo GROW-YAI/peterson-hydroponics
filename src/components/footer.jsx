@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter, } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600 text-white py-10">
-      <div className="container mx-auto px-6 text-center">
+    <footer className="bg-green-600 text-white py-10 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 text-center max-w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-center text-center">
           {/* Logo & About Section */}
           <div className="flex flex-col items-center">
@@ -18,10 +19,11 @@ const Footer = () => {
           <div className="flex flex-col items-center">
             <h3 className="text-xl font-semibold">Quick Links</h3>
             <ul className="mt-3 space-y-2">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">Menu</a></li>
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
+              <li><NavLink to="/" className="hover:underline">Home</NavLink></li>
+              <li><NavLink to="/collection" className="hover:underline">Services</NavLink></li>
+              <li><NavLink to="/more-products" className="hover:underline">Products</NavLink></li>
+              <li><NavLink to="/about-us" className="hover:underline">About Us</NavLink></li>
+              <li><NavLink to="/contact-us" className="hover:underline">Contact</NavLink></li>
             </ul>
           </div>
 

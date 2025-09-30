@@ -42,8 +42,8 @@ const resources = [
 
 const Resources = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6 text-center">
+    <section className="py-16 bg-white overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 text-center max-w-full">
         <h2 className="text-4xl font-bold text-green-600 mb-6">Hydroponics Resources</h2>
         <p className="text-gray-700 mb-8">Explore these resources to learn more about hydroponics farming.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

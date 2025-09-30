@@ -3,14 +3,15 @@ import innovator from "../../assets/images/petersonNyonju.jpg";
 
 const About = () => {
   return (
-    <div className="container mx-auto px-6 py-12 text-center">
+    <div className="container mx-auto px-4 sm:px-6 py-12 text-center max-w-full overflow-x-hidden">
       <h1 className="text-4xl font-bold text-green-600 mb-4">About This Innovator</h1>
       <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
         {/* Image Section */}
         <div className="w-full md:w-1/3">
           <img 
-            src={innovator} // Replace with actual image URL or local path
+            src={innovator}
             alt="Innovator"
+            loading="lazy"
             className="w-full h-64 object-cover rounded-lg shadow-md"
           />
         </div>

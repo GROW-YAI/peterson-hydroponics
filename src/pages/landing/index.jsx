@@ -5,7 +5,6 @@ import Reviews from "../reviews"
 import Services from "./components/services"
 import Testimonials from "./components/testimonials"
 import MoreProducts from "./components/more-products"
-import ContactUs from "./contactUs"
 
 const LandingPage = () => {
   return (
@@ -18,9 +17,6 @@ const LandingPage = () => {
       </section>
       <section id="about">
       <About />
-      </section>
-      <section id="contact">
-        <ContactUs />
       </section>
       <Collection />
       <Testimonials />

@@ -40,8 +40,8 @@ const Services = () => {
   return (
     <>
       {/* 🟢 Services Section (Fix Applied) */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-16 bg-white overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 text-center max-w-full">
           <h2 className="text-4xl font-bold text-green-600 mb-6">Our Products & Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service) => (
@@ -59,8 +59,8 @@ const Services = () => {
       </section>
 
       {/* 🟢 Categories Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container mx-auto px-6">
+      <section className="py-16 bg-green-50 overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             {/* Left Images */}
             <div className="grid grid-cols-1 gap-4">
@@ -69,6 +69,7 @@ const Services = () => {
                   <img
                     src={category.image}
                     alt={category.name}
+                    loading="lazy"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-all">
@@ -80,7 +81,7 @@ const Services = () => {
 
             {/* Center Image & Button */}
             <div className="text-center">
-              <img src={featuredImg} alt="Featured" className="w-full h-80 object-cover rounded-lg shadow-lg mb-4" />
+              <img src={featuredImg} alt="Featured" loading="lazy" className="w-full h-80 object-cover rounded-lg shadow-lg mb-4" />
               <h2 className="text-3xl font-bold text-green-600 mb-3">Fresh & Healthy</h2>
               <p className="text-gray-700 mb-4">Explore our range of fresh organic products.</p>
               <Link to="/more-products">
@@ -97,6 +98,7 @@ const Services = () => {
                   <img
                     src={category.image}
                     alt={category.name}
+                    loading="lazy"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-all">
