@@ -1,11 +1,14 @@
 import React from "react";
 import { Quote } from "lucide-react";
+import jessicaImg from "../../../assets/images/Linda Carter.jpg";
+import davidImg from "../../../assets/images/David Thompson.jpg";
+import lindaImg from "../../../assets/images/John Smith.jpg";
 
-// Array of profile images
+// Array of profile images - now using local optimized images
 const profileImages = [
-  "https://randomuser.me/api/portraits/women/1.jpg",
-  "https://randomuser.me/api/portraits/men/2.jpg",
-  "https://randomuser.me/api/portraits/women/3.jpg",
+  jessicaImg,
+  davidImg,
+  lindaImg,
 ];
 
 const testimonials = [
@@ -46,7 +49,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-8 bg-gradient-to-r from-yellow-600 via-green-500 to-emerald-500 relative overflow-hidden">
+    <section className="py-8 bg-gradient-to-r from-yellow-600 via-green-500 to-emerald-500 relative overflow-hidden w-full">
       {/* Decorative circles */}
       <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-white/10 -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-white/10 translate-x-1/3 translate-y-1/3"></div>
@@ -67,8 +70,9 @@ const Testimonials = () => {
               <div className="flex justify-center mb-3">
                 <img 
                   src={testimonial.image} 
-                  alt={testimonial.name} 
-                  className="w-16 h-16 rounded-full border-2 shadow-md group-hover:scale-110 transition-transform duration-300"
+                  alt={testimonial.name}
+                  loading="lazy"
+                  className="w-16 h-16 rounded-full border-2 shadow-md group-hover:scale-110 transition-transform duration-300 object-cover"
                 />
               </div>
 

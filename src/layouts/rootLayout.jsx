@@ -3,12 +3,12 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 const RootLayout = () => {
-  return (<>
-  <Navbar/>
-  <Outlet/>
-  <Footer/>
-
-  </>
+  return (
+    <div className="overflow-x-hidden w-full">
+      <Navbar/>
+      <Outlet/>
+      <Footer/>
+    </div>
   )
 };
 
