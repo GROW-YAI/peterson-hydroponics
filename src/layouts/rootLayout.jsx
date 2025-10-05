@@ -6,7 +6,10 @@ const RootLayout = () => {
   return (
     <div className="overflow-x-hidden w-full">
       <Navbar/>
-      <Outlet/>
+      {/* Add padding-top to account for fixed navbar height */}
+      <div className="pt-24">
+        <Outlet/>
+      </div>
       <Footer/>
     </div>
   )

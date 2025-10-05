@@ -6,6 +6,7 @@ import { heroImages, preloadHeroImage } from '../../../utils/imageOptimization';
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [textVisible, setTextVisible] = useState(true);
 
   // Preload first image for better LCP
   useEffect(() => {
@@ -14,14 +15,34 @@ const Hero = () => {
     }
   }, []);
 
-  // Auto-advance slides every 5 seconds
+  // Auto-advance slides every 5 seconds with perfectly synchronized transitions
   useEffect(() => {
     const interval = setInterval(() => {
+      // Start text fade out and slide change simultaneously
+      setTextVisible(false);
       setActiveSlide((prev) => (prev + 1) % heroImages.length);
+      
+      // Fade text back in at the perfect moment (when new image starts appearing)
+      setTimeout(() => {
+        setTextVisible(true);
+      }, 100);
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
+
+  // Handle manual slide change with instant synchronized transition
+  const handleSlideChange = (slideIndex) => {
+    if (slideIndex !== activeSlide) {
+      setTextVisible(false);
+      setActiveSlide(slideIndex);
+      
+      // Instant text fade in for manual clicks
+      setTimeout(() => {
+        setTextVisible(true);
+      }, 100);
+    }
+  };
 
   const currentImage = heroImages[activeSlide];
 
@@ -32,7 +53,7 @@ const Hero = () => {
         {heroImages.map((image, index) => (
           <div
             key={image.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
               index === activeSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -52,46 +73,31 @@ const Hero = () => {
 
       {/* Content Container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Side - Text Content */}
-          <div className="max-w-2xl">
-            {/* Main Title - Two Lines */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up drop-shadow-lg">
-              Empowering Innovation Through
-              <br />
-              Sustainable Agriculture
-            </h1>
+        <div className={`max-w-2xl transition-opacity duration-150 ease-in-out ${textVisible ? 'opacity-100' : 'opacity-0'}`}>
+          {/* Main Title - Two Lines (Dynamic based on slide) */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            {currentImage.title}
+            <br />
+            {currentImage.subtitle}
+          </h1>
 
-            {/* Description */}
-            <p className="text-lg sm:text-xl text-gray-100 mb-8 leading-relaxed animate-fade-in-delay drop-shadow-md">
-              Join us in shaping the future with cutting-edge hydroponic solutions and organic food production. Let food be thy medicine and medicine be thy food!
-            </p>
+          {/* Description (Dynamic based on slide) */}
+          <p className="text-lg sm:text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-md">
+            {currentImage.description}
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-delay-2">
-              <Button 
-                text="Get Started"
-                url="/collection"
-                variant="primary"
-              />
-              <Button 
-                text="Learn More"
-                url="/about-us"
-                variant="secondary"
-              />
-            </div>
-          </div>
-
-          {/* Right Side - Image Preview (Optional - shows current slide info) */}
-          <div className="hidden lg:block">
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 animate-fade-in-delay-2">
-              <h3 className="text-white text-2xl font-semibold mb-2">
-                {currentImage.name}
-              </h3>
-              <p className="text-gray-200 text-sm">
-                Slide {activeSlide + 1} of {heroImages.length}
-              </p>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <Button 
+              text="Get Started"
+              url="/collection"
+              variant="primary"
+            />
+            <Button 
+              text="Learn More"
+              url="/about-us"
+              variant="secondary"
+            />
           </div>
         </div>
       </div>
@@ -101,7 +107,7 @@ const Hero = () => {
         <SlideDots 
           activeSlide={activeSlide}
           totalSlides={heroImages.length}
-          onDotClick={setActiveSlide}
+          onDotClick={handleSlideChange}
         />
       </div>
     </section>

@@ -19,11 +19,11 @@ const Footer = () => {
           <div className="flex flex-col items-center">
             <h3 className="text-xl font-semibold">Quick Links</h3>
             <ul className="mt-3 space-y-2">
-              <li><NavLink to="/" className="hover:underline">Home</NavLink></li>
-              <li><NavLink to="/collection" className="hover:underline">Services</NavLink></li>
-              <li><NavLink to="/more-products" className="hover:underline">Products</NavLink></li>
-              <li><NavLink to="/about-us" className="hover:underline">About Us</NavLink></li>
-              <li><NavLink to="/contact-us" className="hover:underline">Contact</NavLink></li>
+              <li><NavLink to="/" className="hover:underline transition-colors">Home</NavLink></li>
+              <li><NavLink to="/about-us" className="hover:underline transition-colors">About Us</NavLink></li>
+              <li><NavLink to="/collection" className="hover:underline transition-colors">Services</NavLink></li>
+              <li><NavLink to="/more-products" className="hover:underline transition-colors">Products</NavLink></li>
+              <li><NavLink to="/contact-us" className="hover:underline transition-colors">Contact</NavLink></li>
             </ul>
           </div>
 
