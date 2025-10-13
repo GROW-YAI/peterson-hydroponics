@@ -1,75 +1,92 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Twitter, } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600 text-white py-10 overflow-x-hidden">
-      <div className="container mx-auto px-4 sm:px-6 text-center max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-center text-center">
-          {/* Logo & About Section */}
-          <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-bold">PH Foods</h2>
-            <p className="mt-3 text-sm">
-              Bringing you the freshest and tastiest <br /> meals made with love and passion.
+    <footer className="bg-green-900 text-white py-12 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="flex flex-col md:flex-row justify-around items-start gap-8">
+          {/* Company Info Section */}
+          <div className="text-left">
+            <div className="mb-4">
+              <img
+                src={logo}
+                alt="Peterson Hydroponics"
+                className="w-auto brightness-0 invert object-contain"
+                style={{ 
+                  height: '80px',
+                  maxWidth: '100%',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+              Fresh produce directly from our farms to <br />
+              your table. Cutting out middlemen for <br />
+              better prices and quality.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-xl font-semibold">Quick Links</h3>
-            <ul className="mt-3 space-y-2">
-              <li><NavLink to="/" className="hover:underline transition-colors">Home</NavLink></li>
-              <li><NavLink to="/about-us" className="hover:underline transition-colors">About Us</NavLink></li>
-              <li><NavLink to="/collection" className="hover:underline transition-colors">Services</NavLink></li>
-              <li><NavLink to="/more-products" className="hover:underline transition-colors">Products</NavLink></li>
-              <li><NavLink to="/contact-us" className="hover:underline transition-colors">Contact</NavLink></li>
-            </ul>
-          </div>
-
-          {/* Social Media */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-xl font-semibold">Follow Us</h3>
-            <div className="flex justify-center gap-4 mt-3">
+            
+            {/* Social Media Icons */}
+            <div className="flex gap-3">
               <a 
                 href="https://www.facebook.com/profile.php?id=61573921437821" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-gray-200"
+                className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
               >
-                <Facebook size={24} />
+                <Facebook size={16} />
               </a>
               <a 
                 href="https://www.instagram.com/peter.sonhydrophonics/?next=%2F&hl=en" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-gray-200"
+                className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
               >
-                <Instagram size={24} />
+                <Instagram size={16} />
               </a>
               <a 
                 href="https://twitter.com/yourpage" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-gray-200"
+                className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
               >
-                <Twitter size={24} />
+                <Twitter size={16} />
               </a>
               <a 
                 href="https://www.linkedin.com/company/petersonhydrophonics/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-gray-200"
+                className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
               >
-                <Linkedin size={24} />
+                <Linkedin size={16} />
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Copyright */}
-        <div className="mt-8 text-center text-sm border-t border-white pt-4 text-gray-200">
-          &copy; {new Date().getFullYear()} PH Foods. All rights reserved.
+          {/* Quick Links */}
+          <div className="text-left">
+            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <ul className="space-y-3">
+              <li><NavLink to="/collection" className="text-gray-300 hover:text-white transition-colors text-sm">Categories</NavLink></li>
+              <li><NavLink to="/about-us" className="text-gray-300 hover:text-white transition-colors text-sm">How it Works</NavLink></li>
+              <li><NavLink to="/more-products" className="text-gray-300 hover:text-white transition-colors text-sm">Featured Sellers</NavLink></li>
+              <li><NavLink to="/about-us" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</NavLink></li>
+              <li><NavLink to="/contact-us" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</NavLink></li>
+            </ul>
+          </div>
+
+          {/* Shop Categories */}
+          <div className="text-left">
+            <h3 className="text-lg font-semibold mb-4 text-white">Shop categories</h3>
+            <ul className="space-y-3">
+              <li><NavLink to="/more-products" className="text-gray-300 hover:text-white transition-colors text-sm">Fresh Vegetables</NavLink></li>
+              <li><NavLink to="/more-products" className="text-gray-300 hover:text-white transition-colors text-sm">Seasonal Fruits</NavLink></li>
+              <li><NavLink to="/more-products" className="text-gray-300 hover:text-white transition-colors text-sm">Grains & Staples</NavLink></li>
+              <li><NavLink to="/more-products" className="text-gray-300 hover:text-white transition-colors text-sm">Dairy Products</NavLink></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
