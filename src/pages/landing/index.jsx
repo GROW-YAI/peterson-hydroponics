@@ -1,10 +1,9 @@
-import About from "../about"
-import Collection from "../collection"
 import Hero from "./components/hero"
-import Reviews from "../reviews"
-import Services from "./components/services"
 import Testimonials from "./components/testimonials"
-import MoreProducts from "./components/more-products"
+import HydroponicsInfo from "./components/hydroponics-info"
+import Impact from "./components/impact"
+import ProduceShowcase from "./components/produce-showcase"
+import DeliverySection from "./components/delivery-section"
 
 const LandingPage = () => {
   return (
@@ -12,16 +11,13 @@ const LandingPage = () => {
       <section id="home">       
         <Hero />
       </section>
-      <section id="services">      
-        <Services />
-      </section>
       <section id="about">
-      <About />
+        <HydroponicsInfo />
       </section>
-      <Collection />
+      <Impact />
+      <ProduceShowcase />
+      <DeliverySection />
       <Testimonials />
-      <Reviews />
-      <MoreProducts />
     </div>
   )
 }

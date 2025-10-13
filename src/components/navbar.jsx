@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/images/phlogo.png"; // Update the path based on your project structure
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-around max-w-full">
         {/* Logo */}
         <NavLink to="/" className="flex items-center group">
-          <img src={logo} alt="Peterson Hydroponics" className="h-14 transition-transform duration-300 group-hover:scale-105" /> 
+          <img 
+            src={logo} 
+            alt="Peterson Hydroponics" 
+            className="h-20 sm:h-24 transition-transform duration-300 group-hover:scale-105 drop-shadow-md" 
+            style={{ mixBlendMode: 'multiply' }}
+          /> 
         </NavLink>
 
         {/* Desktop Nav - Professional Design */}
