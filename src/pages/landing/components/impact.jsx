@@ -34,11 +34,7 @@ const Impact = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Award className="w-4 h-4" />
-            Our Impact
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-600 mb-6">
             Transforming Agriculture
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -52,17 +48,17 @@ const Impact = () => {
           {impactData.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-105 hover:-translate-y-1 group"
             >
               {/* Metric */}
               <div className="mb-1">
-                <span className="text-3xl font-bold text-gray-900">
+                <span className="text-3xl font-bold text-green-600 group-hover:text-gray-900 transition-colors duration-300">
                   {item.metric}
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 text-xs font-medium">
+              <p className="text-gray-600 text-xs font-medium transition-colors duration-300">
                 {item.description}
               </p>
             </div>

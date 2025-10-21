@@ -8,26 +8,22 @@ import produce4Img from "../../../assets/images/produce4.png";
 const produceData = [
   {
     id: 1,
-    name: "Fresh Cabbage",
-    price: "GHS 12.00",
+    name: "Fresh Lettuce",
     image: produce1Img
   },
   {
     id: 2,
-    name: "Fresh Lettuce",
-    price: "GHS 15.00",
+    name: "Fresh Cabbage",
     image: produce2Img
   },
   {
     id: 3,
-    name: "Mixed Fruits",
-    price: "GHS 28.00",
+    name: "Mass Production of Vegetables",
     image: produce3Img
   },
   {
     id: 4,
-    name: "Fresh Vegetables",
-    price: "GHS 20.00",
+    name: "Leafy green lettuce",
     image: produce4Img
   }
 ];
@@ -38,7 +34,7 @@ const ProduceShowcase = () => {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         {/* Header */}
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">Fresh Farm Produce</h2>
+          <h2 className="text-3xl font-bold" style={{color: '#16a34a'}}>Fresh Farm Produce</h2>
         </div>
 
         {/* Products Grid */}
@@ -58,11 +54,6 @@ const ProduceShowcase = () => {
               {/* Product Info */}
               <div className="space-y-2">
                 <h3 className="font-semibold text-gray-900 text-lg">{product.name}</h3>
-                
-                {/* Price */}
-                <div className="pt-2">
-                  <span className="text-lg font-bold text-gray-900">{product.price}</span>
-                </div>
               </div>
             </div>
           ))}
