@@ -14,7 +14,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Peterson Hydroponics" 
-            className="h-20 sm:h-24 transition-transform duration-300 group-hover:scale-105 drop-shadow-md" 
+            className="h-14 sm:h-16 transition-transform duration-300 group-hover:scale-105 drop-shadow-md" 
             style={{ mixBlendMode: 'multiply' }}
           /> 
         </NavLink>
@@ -71,7 +71,7 @@ const Navbar = () => {
               }`
             }
           >
-            Products
+            Produce
           </NavLink>
           
           <NavLink 
@@ -155,7 +155,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              📦 Products
+              📦 Produce
             </NavLink>
             
             <NavLink 

@@ -1,29 +1,21 @@
 import React from "react";
-import jessicaImg from "../../../assets/images/Linda Carter.jpg";
-import davidImg from "../../../assets/images/David Thompson.jpg";
-import lindaImg from "../../../assets/images/John Smith.jpg";
+import vivianImg from "../../../assets/images/PetersonTestimonial2.jpg";
+import vivian2Img from "../../../assets/images/PetersonTestimonial3.jpg";
 
 const testimonials = [
   {
     id: 1,
-    name: "Jessica Williams",
-    position: "Regular Customer",
-    testimonial: "The organic vegetables from this farm are the freshest I've ever used. The quality and taste are exceptional, and delivery is always on time.",
-    image: jessicaImg
+    name: "Vivian Bilite",
+    position: "Fashion Designer",
+    testimonial: "Vegetables retain their vibrant color of green and stay fresh for long periods of time.",
+    image: vivianImg
   },
   {
     id: 2,
-    name: "David Thompson", 
-    position: "Restaurant Owner",
-    testimonial: "My restaurant now exclusively sources from Peterson Hydroponics. The consistent quality and freshness of their produce has elevated our dishes significantly.",
-    image: davidImg
-  },
-  {
-    id: 3,
-    name: "Linda Carter",
-    position: "Health Coach",
-    testimonial: "I recommend Peterson Hydroponics to all my clients. The nutrient density and purity of their vegetables are exactly what health-conscious people need.",
-    image: lindaImg
+    name: "Joseph Nakoja", 
+    position: "Farmer",
+    testimonial: "The lettuce and cabbage are crunchy and cheap; the price is worth the pleasure of eating them.",
+    image: vivian2Img
   }
 ];
 
@@ -32,11 +24,11 @@ const Testimonials = () => {
     <section className="py-16 bg-green-50">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">What does Customers say?</h2>
+          <h2 className="text-4xl font-bold mb-2" style={{color: '#16a34a'}}>What does Customers say?</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {testimonials.slice(0, 2).map((testimonial) => (
             <div
               key={testimonial.id}
               className="bg-white rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-1 group"
