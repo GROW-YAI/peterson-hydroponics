@@ -1,115 +1,120 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Tractor, Utensils, Truck } from "lucide-react";
-import fruitsImg from "../../assets/images/fruits.jpg";
-import vegetablesImg from "../../assets/images/vegetables.jpg";
-import juicesImg from "../../assets/images/juices.jpg";
-import driedImg from "../../assets/images/dry-foods.jpg";
-import featuredImg from "../../assets/images/featured.jpg";
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import motorkingImg from "../../assets/images/PetersonMotorking.png";
+import busImg from "../../assets/images/PetersonBus.png";
+import marketImg from "../../assets/images/PetersonMarket.jpg";
 
-const services = [
+const deliveryTypes = [
   {
     id: 1,
-    icon: <Tractor size={40} className="text-green-600" />,
-    title: "Skilled Farmers",
-    description: "Our highly skilled farmers carefully select and plant quality seeds that yield quality harvest."
+    title: "Aboboyaa Delivery",
+    image: motorkingImg,
+    description: "This service targets customers who buy in a large quantity and stay in nearer places. This comes at an unstable fee. Prices are calculated per distance."
   },
   {
     id: 2,
-    icon: <Utensils size={40} className="text-green-600" />,
-    title: "Quality Foodstuffs",
-    description: "We use only the finest foodstuffs to ensure every bite is full of flavor and nutrition."
+    title: "Bus Delivery",
+    image: busImg,
+    description: "Some of our customers are living in the cities and places very far from the farms. If you are one of this kind, we would package the vegetables and deliver them to you after buying from us. A lot of buses operate in these places. Through them vegetables will be delivered quickly and safely. Fees for this service depends on the quantity of the produce and the amount to be charged by the bus operators."
   },
   {
     id: 3,
-    icon: <Truck size={40} className="text-green-600" />,
-    title: "Fast Delivery",
-    description: "Enjoy quick and reliable delivery right to your doorstep, ensuring fresh and hot meals every time."
+    title: "Market Delivery",
+    image: marketImg,
+    description: "Our delivery also focuses on retail buyers and vegetables sellers in the nearby market places. We deliver vegetables to these sellers. Additionally, we also do retail selling during market days."
   }
 ];
 
-const categories = [
-  { id: 1, name: "Fruits", image: fruitsImg },
-  { id: 2, name: "Vegetables", image: vegetablesImg },
-  { id: 3, name: "Juices", image: juicesImg },
-  { id: 4, name: "Dried", image: driedImg }
-];
-
 const Collection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % deliveryTypes.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + deliveryTypes.length) % deliveryTypes.length);
+  };
+
   return (
-    <>
-      {/* Services Section */}
-      <section className="py-16 bg-white overflow-x-hidden">
-        <div className="container mx-auto px-4 sm:px-6 text-center max-w-full">
-          <h2 className="text-4xl font-bold text-green-600 mb-6">Our Products & Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="bg-green-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all"
-              >
-                <div className="flex justify-center mb-4">{service.icon}</div>
-                <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mt-2">{service.description}</p>
-              </div>
-            ))}
-          </div>
+    <div className="py-16 bg-white overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-green-600 mb-6">Our Services</h2>
+          <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">
+            We offer delivery services in addition to the crop production. It comes in three folds. 
+            Our customers and consumers come from near and far.
+          </p>
         </div>
-      </section>
 
-      {/* Categories Section */}
-      <section className="py-16 bg-green-50 overflow-x-hidden">
-        <div className="container mx-auto px-4 sm:px-6 max-w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {/* Left Images */}
-            <div className="grid grid-cols-1 gap-4">
-              {categories.slice(0, 2).map((category) => (
-                <div key={category.id} className="relative group">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    loading="lazy"
-                    className="w-full h-64 object-cover rounded-lg shadow-lg"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-all">
-                    <p className="text-white font-semibold text-lg">{category.name}</p>
-                  </div>
-                </div>
-              ))}
+        {/* Delivery Slideshow */}
+        <div className="relative bg-green-50 rounded-2xl shadow-lg p-8 md:p-12">
+          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+            {/* Image Section */}
+            <div className="w-full md:w-2/5">
+              <img
+                src={deliveryTypes[currentSlide].image}
+                alt={deliveryTypes[currentSlide].title}
+                className="w-full h-80 object-contain rounded-lg"
+              />
             </div>
 
-            {/* Center Image & Button */}
-            <div className="text-center">
-              <img src={featuredImg} alt="Featured" loading="lazy" className="w-full h-80 object-cover rounded-lg shadow-lg mb-4" />
-              <h2 className="text-3xl font-bold text-green-600 mb-3">Fresh & Healthy</h2>
-              <p className="text-gray-700 mb-4">Explore our range of fresh organic products.</p>
-              <Link to="/more-products">
-                <button className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition">
-                  See More
+            {/* Content Section */}
+            <div className="w-full md:w-3/5 text-left">
+              <h3 className="text-3xl font-bold text-green-600 mb-4">
+                {deliveryTypes[currentSlide].title}
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {deliveryTypes[currentSlide].description}
+              </p>
+            </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          {deliveryTypes.length > 1 && (
+            <>
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                <button
+                  onClick={prevSlide}
+                  className="bg-white text-green-600 p-3 rounded-full shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft size={24} />
                 </button>
-              </Link>
-            </div>
+                <span className="text-green-600 text-xs font-medium">Previous</span>
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                <button
+                  onClick={nextSlide}
+                  className="bg-white text-green-600 p-3 rounded-full shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight size={24} />
+                </button>
+                <span className="text-green-600 text-xs font-medium">Next</span>
+              </div>
+            </>
+          )}
 
-            {/* Right Images */}
-            <div className="grid grid-cols-1 gap-4">
-              {categories.slice(2, 4).map((category) => (
-                <div key={category.id} className="relative group">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    loading="lazy"
-                    className="w-full h-64 object-cover rounded-lg shadow-lg"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-all">
-                    <p className="text-white font-semibold text-lg">{category.name}</p>
-                  </div>
-                </div>
+          {/* Slide Indicators */}
+          {deliveryTypes.length > 1 && (
+            <div className="flex justify-center gap-2 mt-8">
+              {deliveryTypes.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? "bg-green-600 w-8" : "bg-gray-300"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
               ))}
             </div>
-          </div>
+          )}
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 

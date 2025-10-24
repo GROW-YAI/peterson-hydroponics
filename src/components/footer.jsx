@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logo from "../assets/images/logo.png";
 
 const Footer = () => {
@@ -40,14 +40,6 @@ const Footer = () => {
                 className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
               >
                 <Instagram size={16} />
-              </a>
-              <a 
-                href="https://twitter.com/yourpage" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
-              >
-                <Twitter size={16} />
               </a>
               <a 
                 href="https://www.linkedin.com/company/petersonhydrophonics/" 
