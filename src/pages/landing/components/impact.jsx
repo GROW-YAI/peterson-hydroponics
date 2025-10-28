@@ -48,7 +48,7 @@ const Impact = () => {
           {impactData.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-105 hover:-translate-y-1 group"
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-105 hover:-translate-y-1 group text-center md:text-left"
             >
               {/* Metric */}
               <div className="mb-1">

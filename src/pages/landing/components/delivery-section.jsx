@@ -29,7 +29,7 @@ const DeliverySection = () => {
               </p>
               
               {/* CTA Button */}
-              <div className="text-left">
+              <div className="text-center lg:text-left">
                 <Link to="/collection">
                   <button className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300">
                     Learn more

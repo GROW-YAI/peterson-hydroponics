@@ -56,25 +56,26 @@ const Collection = () => {
               <img
                 src={deliveryTypes[currentSlide].image}
                 alt={deliveryTypes[currentSlide].title}
-                className="w-full h-80 object-contain rounded-lg"
+                className="w-full h-48 md:h-80 object-contain rounded-lg"
               />
             </div>
 
             {/* Content Section */}
-            <div className="w-full md:w-3/5 text-left">
-              <h3 className="text-3xl font-bold text-green-600 mb-4">
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-4">
                 {deliveryTypes[currentSlide].title}
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 {deliveryTypes[currentSlide].description}
               </p>
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons - Side positioned on desktop, bottom on mobile */}
           {deliveryTypes.length > 1 && (
             <>
-              <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+              {/* Desktop Navigation - Side positioned */}
+              <div className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 flex-col items-center gap-2">
                 <button
                   onClick={prevSlide}
                   className="bg-white text-green-600 p-3 rounded-full shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300"
@@ -84,7 +85,7 @@ const Collection = () => {
                 </button>
                 <span className="text-green-600 text-xs font-medium">Previous</span>
               </div>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+              <div className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col items-center gap-2">
                 <button
                   onClick={nextSlide}
                   className="bg-white text-green-600 p-3 rounded-full shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300"
@@ -97,9 +98,31 @@ const Collection = () => {
             </>
           )}
 
+          {/* Mobile Navigation - Bottom positioned */}
+          {deliveryTypes.length > 1 && (
+            <div className="flex md:hidden justify-center gap-6 mt-6">
+              <button
+                onClick={prevSlide}
+                className="flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-all duration-300"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft size={20} />
+                <span className="text-sm font-medium">Previous</span>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-all duration-300"
+                aria-label="Next slide"
+              >
+                <span className="text-sm font-medium">Next</span>
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          )}
+
           {/* Slide Indicators */}
           {deliveryTypes.length > 1 && (
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-2 mt-6">
               {deliveryTypes.map((_, index) => (
                 <button
                   key={index}

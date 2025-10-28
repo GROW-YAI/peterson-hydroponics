@@ -73,7 +73,7 @@ const Hero = () => {
 
       {/* Content Container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`max-w-2xl transition-opacity duration-150 ease-in-out ${textVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`max-w-2xl transition-opacity duration-150 ease-in-out text-center sm:text-left ${textVisible ? 'opacity-100' : 'opacity-0'}`}>
           {/* Main Title - Two Lines (Dynamic based on slide) */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
             {currentImage.title}
@@ -87,16 +87,18 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 items-center sm:items-start">
             <Button 
               text="Get Started"
               url="/collection"
               variant="primary"
+              className="w-auto"
             />
             <Button 
               text="Learn More"
               url="/about-us"
               variant="secondary"
+              className="w-auto"
             />
           </div>
         </div>

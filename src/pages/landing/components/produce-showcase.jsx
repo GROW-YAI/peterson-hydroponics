@@ -33,7 +33,7 @@ const ProduceShowcase = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8 text-center md:text-left">
           <h2 className="text-3xl font-bold" style={{color: '#16a34a'}}>Fresh Farm Produce</h2>
         </div>
 
@@ -52,7 +52,7 @@ const ProduceShowcase = () => {
               </div>
 
               {/* Product Info */}
-              <div className="space-y-2">
+              <div className="space-y-2 text-center md:text-left">
                 <h3 className="font-semibold text-gray-900 text-lg">{product.name}</h3>
               </div>
             </div>

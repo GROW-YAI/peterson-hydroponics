@@ -113,7 +113,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              🏠 Home
+              Home
             </NavLink>
             
             <NavLink 
@@ -127,7 +127,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              ℹ️ About
+              About
             </NavLink>
             
             <NavLink 
@@ -141,7 +141,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              ⚙️ Services
+              Services
             </NavLink>
             
             <NavLink 
@@ -155,7 +155,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              📦 Produce
+              Produce
             </NavLink>
             
             <NavLink 
@@ -169,7 +169,7 @@ const Navbar = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              📞 Contact Us
+              Contact Us
             </NavLink>
           </div>
         </div>

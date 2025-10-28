@@ -7,13 +7,13 @@ const produceItems = [
     id: 1,
     image: produce3Img,
     title: "Fresh Cabbage",
-    description: "Our premium cabbage is grown using advanced hydroponic systems, ensuring crisp texture and rich nutrients. Perfect for salads, stir-fries, and traditional dishes."
+    description: "Our cabbage is grown using both traditional method and hydroponics depending on the farming season. Vegetable is very nutritious and cheap."
   },
   {
     id: 2,
     image: produce4Img,
     title: "Fresh Lettuce",
-    description: "Vibrant, leafy green lettuce harvested fresh from our farms. Packed with vitamins and minerals, ideal for healthy salads and sandwiches."
+    description: "Our lettuce produce which is grown all year round is one of the best one can ever find. They are always fresh and much less expensive."
   }
 ];
 
@@ -47,11 +47,11 @@ const MoreProducts = () => {
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 text-left">
-            <h3 className="text-3xl font-bold text-green-600 mb-4 transition-opacity duration-500">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-4 transition-opacity duration-500">
               {currentItem.title}
             </h3>
-            <p className="text-gray-700 text-lg leading-relaxed transition-opacity duration-500">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed transition-opacity duration-500">
               {currentItem.description}
             </p>
           </div>

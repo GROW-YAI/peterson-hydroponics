@@ -23,7 +23,7 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-green-50">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-        <div className="mb-12">
+        <div className="mb-12 text-center md:text-left">
           <h2 className="text-4xl font-bold mb-2" style={{color: '#16a34a'}}>What does Customers say?</h2>
         </div>
 
@@ -31,7 +31,7 @@ const Testimonials = () => {
           {testimonials.slice(0, 2).map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-1 group"
+              className="bg-white rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-1 group text-center md:text-left"
               style={{boxShadow: '6px 6px 0px #16a34a'}}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = '8px 8px 0px #16a34a';
@@ -48,7 +48,7 @@ const Testimonials = () => {
               </div>
 
               {/* Profile Section */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 justify-center md:justify-start">
                 <div className="relative">
                   <img
                     src={testimonial.image}
