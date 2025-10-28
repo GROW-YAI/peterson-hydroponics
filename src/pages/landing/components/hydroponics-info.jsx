@@ -6,7 +6,7 @@ const HydroponicsInfo = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-4xl font-bold text-green-600 text-left mb-12">
+        <h2 className="text-4xl font-bold text-green-600 text-center md:text-left mb-12">
           About Hydroponics Farming
         </h2>
         
@@ -22,7 +22,7 @@ const HydroponicsInfo = () => {
           </div>
 
           {/* Content Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <p className="text-gray-700 leading-relaxed text-lg">
               Hydroponics is a revolutionary method of growing plants without soil, using nutrient-rich water solutions. 
               This innovative farming system provides a sustainable and chemical-free way to grow vegetables year-round.
@@ -35,7 +35,7 @@ const HydroponicsInfo = () => {
             </p>
 
             {/* CTA Button */}
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center md:justify-start">
               <Link to="/about-us">
                 <button className="bg-green-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                   Learn More About Us
