@@ -46,12 +46,12 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-8 md:items-stretch">
           {/* CEO Image Container */}
           <div className="w-full md:w-1/2 flex">
-            <div className="bg-white rounded-lg shadow-md p-4 w-full flex items-center">
+            <div className="bg-white rounded-lg shadow-md p-4 w-full flex items-center justify-center">
               <img 
                 src={innovator}
                 alt="Peterson Nyonyu - CEO"
                 loading="lazy"
-                className="w-full h-full object-contain rounded-lg"
+                className="w-full max-h-96 object-contain rounded-2xl"
               />
             </div>
           </div>
@@ -59,14 +59,14 @@ const About = () => {
           {/* CEO Info Container */}
           <div className="w-full md:w-1/2 flex">
             <div className="bg-white rounded-lg shadow-md p-8 w-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-green-600 mb-4">Peterson Nyonyu</h3>
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              <h3 className="text-xl font-bold text-green-600 mb-3">Peterson Nyonyu</h3>
+              <p className="text-gray-700 text-base leading-relaxed mb-3">
                 Peterson Nyonyu is a young and ambitious entrepreneur from Atebubu-Amantin in the Bono East Region. He is the visionary founder and CEO of Peterson Farms, dedicated to tackling the challenge of limited access to green vegetables during the dry season.
               </p>
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              <p className="text-gray-700 text-base leading-relaxed mb-3">
                 Through his innovative hydroponic farming system, Peterson has created a sustainable and chemical-free way to grow vegetables year-round. His breakthrough approach ensures that communities gain increased access to fresh, healthy produce, maintaining a steady supply even in dry seasons.
               </p>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-base leading-relaxed">
                 Peterson's efforts are paving the way for sustainable agriculture and food security in the region, demonstrating that with innovation and dedication, it's possible to transform local farming practices and improve community well-being.
               </p>
             </div>

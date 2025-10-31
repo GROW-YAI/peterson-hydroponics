@@ -21,7 +21,7 @@ const deliveryTypes = [
     id: 3,
     title: "Market Delivery",
     image: marketImg,
-    description: "Our delivery also focuses on retail buyers and vegetables sellers in the nearby market places. We deliver vegetables to these sellers. Additionally, we also do retail selling during market days."
+    description: "Our delivery also focuses on retail buyers and vegetables sellers in the nearby market places. We deliver vegetables to these sellers. Additionally, we sell at consumer level during market days."
   }
 ];
 
@@ -56,6 +56,7 @@ const Collection = () => {
               <img
                 src={deliveryTypes[currentSlide].image}
                 alt={deliveryTypes[currentSlide].title}
+                loading="lazy"
                 className="w-full h-48 md:h-80 object-contain rounded-lg"
               />
             </div>
