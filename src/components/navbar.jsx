@@ -14,6 +14,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Peterson Hydroponics" 
+            loading="lazy"
             className="h-14 sm:h-16 transition-transform duration-300 group-hover:scale-105 drop-shadow-md" 
             style={{ mixBlendMode: 'multiply' }}
           /> 

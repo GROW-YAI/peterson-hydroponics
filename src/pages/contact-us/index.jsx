@@ -12,6 +12,7 @@ const ContactUs = () => {
             <img
               src={logo}
               alt="Peterson Farms"
+              loading="lazy"
               className="w-full h-full object-contain"
               style={{ mixBlendMode: 'multiply' }}
             />
