@@ -31,3 +31,15 @@ dist-ssr
 
 # Next.js build output
 .next/
+
+# Build directories
+build/
+
+# Test and documentation files
+widget-test.html
+ToDo.md
+
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+pnpm-lock.yaml.*

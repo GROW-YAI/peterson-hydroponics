@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
-    "boafo-accessibility-widget": "^1.1.8",
+    "boafo-accessibility-widget": "^1.1.6",
     "caniuse-lite": "^1.0.30001779",
     "formik": "^2.4.6",
     "framer-motion": "^12.5.0",
