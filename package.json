@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
-    "caniuse-lite": "^1.0.30001751",
+    "boafo-accessibility-widget": "^1.1.6",
+    "caniuse-lite": "^1.0.30001779",
     "formik": "^2.4.6",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.399.0",
@@ -21,6 +22,7 @@
     "react-router-dom": "^6.24.0"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
